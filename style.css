@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.container{
+  background-color: yellow;
+  height: 100vh;
+  width:100%;
+  position: relative;
+}
+.clock{
+ width:60%;
+  height: 31vh;
+  border: 15px solid orangered;
+  border-radius: 50%;
+  
+  background: url(/Picsart_22-12-08_09-20-18-357.png);
+background-size: cover;
+  position: absolute;
+  
+  box-shadow: 4px 4px 
+  5px black,
+  -4px -4px 5px blue;
+
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+
+#hr{
+  width: 150px;
+  height: 80px;
+  
+}
+
+#min{
+  width: 180px;
+  height: 130px;
+  
+  
+}
+#sec{
+  width: 200px;
+  height: 170px;
+  
+  }
+
+ #hr , #min , #sec{
+    border:;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
+  .clock::before {
+    content: "";
+    width:10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    border:2px solid white;
+    z-index: 4;
+  }
+  #hr::before{
+    position: absolute;
+    content: "";
+    width:5px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: green;
+    z-index:-3;
+  }
+    #min::before{
+    position: absolute;
+    content: "";
+    width:5px;
+    height: 60px;
+    background-color: black;
+    z-index:-1;
+    border-radius: 5px;
+  }
+      #sec::before{
+    position: absolute;
+    content: "";
+    width:2px;
+    height: 100px;
+    background-color: red;
+    z-index:-5;
+    border-radius: 10px;
+  }
